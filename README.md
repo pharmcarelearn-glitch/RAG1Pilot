@@ -56,3 +56,12 @@ uv run --env-file .env agents chat rag1pilot
 The agent acts with the Drive connection of the user who starts the session
 (on-behalf-of), so the deployment is hardened; `agents deploy` does this by
 default.
+
+## Run it on your own VM (no managed-deployment slot needed)
+
+Set up a systemd-managed worker on any small Linux VM with one command — see
+[docs/VM.md](docs/VM.md):
+
+```bash
+sudo MISTRAL_API_KEY="<your-key>" bash scripts/setup-vm.sh
+```
